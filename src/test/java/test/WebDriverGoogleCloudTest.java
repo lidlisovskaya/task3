@@ -28,9 +28,6 @@ public class WebDriverGoogleCloudTest {
 
     @Test
     public void isTotalPriceMatchingIsCalculated() {
-        String googleCloudCalculatorWindow;
-        String YopmailPageWindow;
-        String totalMonthlyPriceFromEmail;
         CloudCalculatorPage cloudCalculatorPage = new CloudHomePage(driver)
                 .openPage()
                 .searchForTerms()
