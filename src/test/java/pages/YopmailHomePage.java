@@ -4,13 +4,13 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 
 
 public class YopmailHomePage extends BasePage {
-    JavascriptExecutor js = (JavascriptExecutor) null;
 
     private final static String HOMEPAGE_URL = "https://yopmail.com/";
     private final static String MAIL_ID = "message";
@@ -19,7 +19,7 @@ public class YopmailHomePage extends BasePage {
     @FindBy(xpath = GENERATED_EMAIL_ADDRESS)
     private WebElement generatedEmailAddress;
 
-    private ArrayList<String> tabs;
+    private List<String> tabs;
 
 
     @FindBy(xpath = "//*[@id='listeliens']/a[@href='email-generator']")

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CloudHomePage extends BasePage {
     private static final String HOMEPAGE_URL = "https://cloud.google.com/";
-    final String INFO_SEARCH = "Google Cloud Platform Pricing Calculator";
+    private static final String INFO_SEARCH = "Google Cloud Platform Pricing Calculator";
 
     @FindBy(xpath = "//input[contains(@name,'q')]")
     public static WebElement searchInput;
