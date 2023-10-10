@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +12,7 @@ import java.time.Duration;
 
 public class BasePage {
     protected WebDriver driver;
+
     protected final static int DEFAULT_WAIT_SECONDS = 60;
 
     public BasePage(WebDriver driver) {
@@ -29,5 +31,9 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_SECONDS))
                 .until(ExpectedConditions
                         .presenceOfElementLocated(by));
+    }
+    protected void pageScroll(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
 }
