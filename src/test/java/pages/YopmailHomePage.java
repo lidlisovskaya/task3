@@ -3,15 +3,10 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
-
-import java.time.Duration;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class YopmailHomePage extends BasePage {
@@ -41,9 +36,6 @@ public class YopmailHomePage extends BasePage {
 
     @FindBy(id = "refresh")
     private WebElement refreshMailButton;
-
-    @FindBy(xpath = "//div[@id='large-banner-rda-vanilla']")
-    private WebElement interruptionBanner;
 
     @FindBy(xpath = "//div[@id='dismiss-button']")
     private WebElement closeInterruptionBanner;
